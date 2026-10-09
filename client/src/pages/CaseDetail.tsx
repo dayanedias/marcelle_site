@@ -4,12 +4,13 @@ import { Footer, PortfolioNav } from "@/components/PortfolioNav";
 import { trpc } from "@/lib/trpc";
 import { seedCases } from "@shared/cases";
 import { localizeCase, useI18n } from "@/lib/i18n";
+import { IS_STATIC_SITE } from "@/const";
 
 export default function CaseDetail() {
   const [, params] = useRoute("/work/:slug");
   const { language, t } = useI18n();
   const slug = params?.slug ?? "";
-  const query = trpc.portfolio.bySlug.useQuery({ slug });
+  const query = trpc.portfolio.bySlug.useQuery({ slug }, { enabled: !IS_STATIC_SITE });
   const rawItem = query.data ?? seedCases.find(candidate => candidate.slug === slug);
   const item = rawItem ? localizeCase(rawItem, language) : undefined;
 

@@ -168,7 +168,32 @@ function vitePluginPublicPlatformConfig(): Plugin {
   };
 }
 
-const plugins = [vitePluginPublicPlatformConfig(), react(), tailwindcss(), jsxLocPlugin(), vitePluginManusDebugCollector()];
+// `vite build --mode pages` publishes to https://<user>.github.io/marcelle_site/.
+// GitHub Pages serves 404.html for unknown paths, so a copy of index.html lets
+// deep links like /work/<slug> boot the SPA. .nojekyll keeps folders such as
+// __manus__ from being dropped.
+function vitePluginGithubPages(): Plugin {
+  let enabled = false;
+  let outDir = "";
+  return {
+    name: "github-pages",
+    apply: "build",
+    config(_config, { mode }) {
+      enabled = mode === "pages";
+      return enabled ? { base: "/marcelle_site/" } : undefined;
+    },
+    configResolved(config) {
+      outDir = config.build.outDir;
+    },
+    closeBundle() {
+      if (!enabled) return;
+      fs.copyFileSync(path.join(outDir, "index.html"), path.join(outDir, "404.html"));
+      fs.writeFileSync(path.join(outDir, ".nojekyll"), "");
+    },
+  };
+}
+
+const plugins = [vitePluginPublicPlatformConfig(), react(), tailwindcss(), jsxLocPlugin(), vitePluginManusDebugCollector(), vitePluginGithubPages()];
 
 export default defineConfig({
   plugins,

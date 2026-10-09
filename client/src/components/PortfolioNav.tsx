@@ -1,6 +1,7 @@
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
+import { IS_STATIC_SITE } from "@/const";
 import { useI18n } from "@/lib/i18n";
 
 export function PortfolioNav() {
@@ -19,14 +20,14 @@ export function PortfolioNav() {
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
         <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label={t("nav.work")}>
-          <a href="/#work" onClick={close}>{t("nav.work")}</a>
-          <a href="/#approach" onClick={close}>{t("nav.approach")}</a>
-          <a href="/#about" onClick={close}>{t("nav.about")}</a>
-          <a href="/#contact" onClick={close}>{t("nav.contact")}</a>
+          <a href={`${import.meta.env.BASE_URL}#work`} onClick={close}>{t("nav.work")}</a>
+          <a href={`${import.meta.env.BASE_URL}#approach`} onClick={close}>{t("nav.approach")}</a>
+          <a href={`${import.meta.env.BASE_URL}#about`} onClick={close}>{t("nav.about")}</a>
+          <a href={`${import.meta.env.BASE_URL}#contact`} onClick={close}>{t("nav.contact")}</a>
           <button className="language-toggle" type="button" onClick={toggleLanguage} aria-label={`Switch to ${language === "pt" ? "English" : "Português"}`}>
             <span className={language === "pt" ? "is-active" : ""}>PT</span><b>/</b><span className={language === "en" ? "is-active" : ""}>EN</span>
           </button>
-          <Link href="/manage" className="nav-admin" onClick={close}>{t("nav.admin")} <ArrowUpRight size={14} /></Link>
+          {!IS_STATIC_SITE && <Link href="/manage" className="nav-admin" onClick={close}>{t("nav.admin")} <ArrowUpRight size={14} /></Link>}
         </nav>
       </div>
     </header>

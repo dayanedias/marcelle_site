@@ -2,6 +2,13 @@ import { OAUTH_STATE_COOKIE, encodeOAuthState } from "@shared/const";
 
 export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 
+// `vite build --mode pages` produces a static build for GitHub Pages: no API
+// server, so pages render the bundled seed cases and the admin area is hidden.
+export const IS_STATIC_SITE = import.meta.env.MODE === "pages";
+
+// Router base without the trailing slash, e.g. "/marcelle_site" on GitHub Pages.
+export const ROUTER_BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 // Start the Manus OAuth login. Call this from an event handler or effect at the
 // moment you want to navigate, e.g. `onClick={() => startLogin()}`.
 //
