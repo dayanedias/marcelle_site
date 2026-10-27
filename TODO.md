@@ -38,4 +38,7 @@
 
 ## Fluxo de design e cronograma
 - [ ] ⏳ Aguardando cliente: exploração de layout, hierarquia e cores no Figma antes das mudanças complexas no código.
-- [ ] Organizar as entregas considerando a viagem da cliente ao Rio de Janeiro (22/10 a 04/11/2026) — retomada das validações a partir de 05/11.
+- [x] Organizar as entregas considerando a viagem da cliente ao Rio de Janeiro (22/10 a 04/11/2026) — retomada das validações a partir de 05/11.
+  - Até 04/11: ajustes estruturais já publicados (hero, menu, faixa, cases migrados do Notion, navegação dos cases, remoção do “Sobre”), prontos para revisão assíncrona.
+  - A partir de 05/11: revisão com a cliente; receber textos da faixa de destaque e do processo, e a foto para o hero.
+  - Depois do Figma: aplicar no código as mudanças de layout, hierarquia e cores.
