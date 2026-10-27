@@ -20,7 +20,7 @@
 - [x] Incluir acesso/download do currículo no menu superior fixo.
 
 ## Faixa de destaque
-- [ ] Remover a frase atual (“Pesquisa não é uma etapa isolada. É uma forma de fazer produto”) e preservar a estrutura visual da faixa para o novo conteúdo.
+- [x] Remover a frase atual (“Pesquisa não é uma etapa isolada. É uma forma de fazer produto”) e preservar a estrutura visual da faixa para o novo conteúdo.
 - [ ] ⏳ Aguardando cliente: definir o novo conteúdo da faixa (métricas, valores ou cards de empresas anteriores).
 
 ## Trabalhos em foco (cases)

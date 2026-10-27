@@ -68,6 +68,7 @@ em { color: var(--coral); font-style: normal; }
 .signal-band { background: var(--petrol); color: var(--paper); padding: 34px 0; }
 .signal-grid { display: grid; grid-template-columns: 1fr 2.2fr 1fr; align-items: center; gap: 30px; }
 .signal-grid .section-index { color: rgba(245,241,233,.64); }
+.signal-content { min-height: 42px; }
 .signal-grid p { margin: 0; font-family: var(--serif); font-size: clamp(23px, 3vw, 38px); line-height: 1.1; letter-spacing: -.04em; }
 .signal-grid strong { color: var(--coral); font-weight: 500; }
 .signal-icon { justify-self: end; color: var(--coral); }
