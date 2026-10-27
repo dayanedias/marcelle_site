@@ -17,7 +17,7 @@
 
 ## Navegação e estrutura global
 - [x] Garantir que o cabeçalho superior permaneça fixo (sticky) durante a rolagem.
-- [ ] Incluir acesso/download do currículo no menu superior fixo.
+- [x] Incluir acesso/download do currículo no menu superior fixo.
 
 ## Faixa de destaque
 - [ ] Remover a frase atual (“Pesquisa não é uma etapa isolada. É uma forma de fazer produto”) e preservar a estrutura visual da faixa para o novo conteúdo.

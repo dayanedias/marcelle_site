@@ -1,7 +1,7 @@
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, FileText, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
-import { IS_STATIC_SITE } from "@/const";
+import { IS_STATIC_SITE, RESUME_VIEW_URL } from "@/const";
 import { useI18n } from "@/lib/i18n";
 
 export function PortfolioNav() {
@@ -24,6 +24,7 @@ export function PortfolioNav() {
           <a href={`${import.meta.env.BASE_URL}#approach`} onClick={close}>{t("nav.approach")}</a>
           <a href={`${import.meta.env.BASE_URL}#about`} onClick={close}>{t("nav.about")}</a>
           <a href={`${import.meta.env.BASE_URL}#contact`} onClick={close}>{t("nav.contact")}</a>
+          <a href={RESUME_VIEW_URL} className="nav-resume" target="_blank" rel="noreferrer" onClick={close}><FileText size={14} /> {t("nav.resume")}</a>
           <button className="language-toggle" type="button" onClick={toggleLanguage} aria-label={`Switch to ${language === "pt" ? "English" : "Português"}`}>
             <span className={language === "pt" ? "is-active" : ""}>PT</span><b>/</b><span className={language === "en" ? "is-active" : ""}>EN</span>
           </button>

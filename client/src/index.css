@@ -34,6 +34,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .main-nav { display: flex; align-items: center; gap: 30px; font-size: 12px; color: var(--ink-soft); }
 .main-nav a { transition: color .2s ease; }
 .main-nav a:hover { color: var(--petrol); }
+.main-nav .nav-resume { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--petrol); color: var(--petrol); font-weight: 700; padding: 8px 12px; transition: background .2s ease, color .2s ease; }
+.main-nav .nav-resume:hover { background: var(--petrol); color: var(--paper); }
 .main-nav .nav-admin { display: inline-flex; align-items: center; gap: 6px; color: var(--petrol); font-weight: 700; }
 .menu-toggle { display: none; border: 0; background: none; color: var(--ink); }
 .language-toggle { border: 1px solid var(--line); background: transparent; color: var(--ink-soft); padding: 7px 9px; display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 9px; letter-spacing: .06em; line-height: 1; transition: border-color .2s ease, color .2s ease, background .2s ease; }
