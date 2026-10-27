@@ -16,7 +16,7 @@
 - [x] Destacar “Ver trabalhos” como CTA principal (rolagem) e adicionar botão secundário “Baixar currículo”.
 
 ## Navegação e estrutura global
-- [ ] Garantir que o cabeçalho superior permaneça fixo (sticky) durante a rolagem.
+- [x] Garantir que o cabeçalho superior permaneça fixo (sticky) durante a rolagem.
 - [ ] Incluir acesso/download do currículo no menu superior fixo.
 
 ## Faixa de destaque
