@@ -24,7 +24,7 @@
 - [ ] ⏳ Aguardando cliente: definir o novo conteúdo da faixa (métricas, valores ou cards de empresas anteriores).
 
 ## Trabalhos em foco (cases)
-- [ ] Remover os microtextos e o texto de apoio do canto direito da seção.
+- [x] Remover os microtextos e o texto de apoio do canto direito da seção.
 - [ ] Migrar o conteúdo completo dos cases (textos e imagens) do Notion para dentro do site.
 - [ ] Criar navegação interna fluida nas páginas de cada projeto (índice das seções + navegação entre cases).
 
