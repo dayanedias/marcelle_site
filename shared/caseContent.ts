@@ -372,7 +372,7 @@ export const caseContent: Record<string, Record<"pt" | "en", CaseContent>> = {
             },
             {
               "type": "p",
-              "text": "Neste projeto, acompanhei a evolução da experiência de protesto no produto: desde a **investigação inicial do trabalho dos usuários** nas Procuradorias, o a**companhamento de uso em piloto** de uma primeira solução, e a **evolução da gestão de estratégias** de protesto em uma nova experiência."
+              "text": "Neste projeto, acompanhei a evolução da experiência de protesto no produto: desde a **investigação inicial do trabalho dos usuários** nas Procuradorias, o **acompanhamento de uso em piloto** de uma primeira solução, e a **evolução da gestão de estratégias** de protesto em uma nova experiência."
             },
             {
               "type": "image",
@@ -420,7 +420,7 @@ export const caseContent: Record<string, Record<"pt" | "en", CaseContent>> = {
             },
             {
               "type": "p",
-              "text": "A forma de trabalhar com o protesto das dívidas variava bastante entre as procuradorias. O t**amanho das equipes,** o **volume de CDAs enviadas a protesto mensalmente**, e a **forma de trabalhar com o sistema** eram diferentes."
+              "text": "A forma de trabalhar com o protesto das dívidas variava bastante entre as procuradorias. O **tamanho das equipes,** o **volume de CDAs enviadas a protesto mensalmente**, e a **forma de trabalhar com o sistema** eram diferentes."
             },
             {
               "type": "p",

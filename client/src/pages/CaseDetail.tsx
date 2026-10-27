@@ -22,15 +22,20 @@ function inline(text: string): ReactNode {
 
 const asset = (src: string) => `${import.meta.env.BASE_URL}${src}`;
 
-function Block({ block }: { block: CaseBlock }) {
+// Diagrams are wide, so each figure links to the full-size file for zooming on small screens.
+function Figure({ src, alt, hint }: { src: string; alt: string; hint: string }) {
+  return <figure className="case-figure"><a href={asset(src)} target="_blank" rel="noreferrer" data-hint={hint}><img src={asset(src)} alt={alt} loading="lazy" /></a></figure>;
+}
+
+function Block({ block, hint }: { block: CaseBlock; hint: string }) {
   switch (block.type) {
     case "p": return <p>{inline(block.text)}</p>;
     case "h3": return <h3>{block.text}</h3>;
     case "quote": return <blockquote>{inline(block.text)}</blockquote>;
     case "ul": return <ul>{block.items.map(item => <li key={item}>{inline(item)}</li>)}</ul>;
     case "ol": return <ol>{block.items.map(item => <li key={item}>{inline(item)}</li>)}</ol>;
-    case "image": return <figure className="case-figure"><img src={asset(block.src)} alt={block.alt} loading="lazy" /></figure>;
-    case "gallery": return <div className="case-gallery">{block.images.map(image => <figure className="case-figure" key={image.src}><img src={asset(image.src)} alt={image.alt} loading="lazy" /></figure>)}</div>;
+    case "image": return <Figure src={block.src} alt={block.alt} hint={hint} />;
+    case "gallery": return <div className="case-gallery">{block.images.map(image => <Figure key={image.src} src={image.src} alt={image.alt} hint={hint} />)}</div>;
   }
 }
 
@@ -98,7 +103,7 @@ export default function CaseDetail() {
       <div className="case-meta-grid"><div><span className="meta-label">{t("case.role")}</span><strong>{item.role}</strong></div><div><span className="meta-label">{t("case.methods")}</span><div className="tag-row">{item.methods.map(method => <span className="tag" key={method}>{method}</span>)}</div></div><div><span className="meta-label">{t("case.topics")}</span><div className="tag-row">{item.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div></div></div>
       <div className={content ? "case-body" : undefined}>{content && <CaseToc sections={sections} active={active} label={t("case.toc")} />}<article className="case-article">
         {content
-          ? content.sections.map(section => <section className="case-section" id={section.id} key={section.id}><h2>{section.title}</h2>{section.blocks.map((block, index) => <Block block={block} key={index} />)}</section>)
+          ? content.sections.map(section => <section className="case-section" id={section.id} key={section.id}><h2>{section.title}</h2>{section.blocks.map((block, index) => <Block block={block} hint={t("case.zoom")} key={index} />)}</section>)
           : <section className="case-section"><p>{item.context}</p><p>{item.summary}</p></section>}
       </article></div>
       {nextCase && nextCase.slug !== slug && <Link href={`/work/${nextCase.slug}`} className={`next-case case-card-${nextCase.cover}`}><span className="meta-label">{t("case.next")}</span><strong>{nextTitle}</strong><span className="next-case-kicker">{nextCase.kicker}</span><ArrowRight size={22} /></Link>}
