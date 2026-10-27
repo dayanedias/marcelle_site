@@ -25,7 +25,7 @@
 
 ## Trabalhos em foco (cases)
 - [x] Remover os microtextos e o texto de apoio do canto direito da seção.
-- [ ] Migrar o conteúdo completo dos cases (textos e imagens) do Notion para dentro do site.
+- [x] Migrar o conteúdo completo dos cases (textos e imagens) do Notion para dentro do site.
 - [ ] Criar navegação interna fluida nas páginas de cada projeto (índice das seções + navegação entre cases).
 
 ## Processo de trabalho
