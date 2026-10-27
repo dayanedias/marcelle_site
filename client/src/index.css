@@ -58,6 +58,7 @@ h1, h2, h3, p { margin-top: 0; }
 .hero h1 > span { display: inline; }
 em { color: var(--coral); font-style: normal; }
 .hero-aside { max-width: 330px; padding-bottom: 12px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
 .hero-lede, .section-intro { color: var(--ink-soft); font-size: 17px; line-height: 1.55; }
 .text-link { display: inline-flex; align-items: center; gap: 9px; color: var(--petrol); font-size: 12px; font-weight: 700; border-bottom: 1px solid var(--petrol); padding-bottom: 6px; transition: gap .2s ease; }
 .text-link:hover { gap: 14px; }

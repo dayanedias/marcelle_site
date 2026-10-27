@@ -13,7 +13,7 @@
 ## Abertura e Hero
 - [x] Manter o título “Entender antes de decidir” e remover microtextos de apoio (“Research-led, product-minded”, “Florianópolis · Brasil”, “Scroll”).
 - [x] Mover as informações pessoais (foto, nome, cargo e LinkedIn) do final da página para o topo, avaliando o peso visual do link do LinkedIn.
-- [ ] Destacar “Ver trabalhos” como CTA principal (rolagem) e adicionar botão secundário “Baixar currículo”.
+- [x] Destacar “Ver trabalhos” como CTA principal (rolagem) e adicionar botão secundário “Baixar currículo”.
 
 ## Navegação e estrutura global
 - [ ] Garantir que o cabeçalho superior permaneça fixo (sticky) durante a rolagem.
