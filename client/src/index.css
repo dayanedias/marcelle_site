@@ -42,9 +42,15 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .language-toggle b { color: var(--line); font-weight: 400; }
 
 .hero { padding: 112px 0 38px; min-height: 670px; display: flex; flex-direction: column; justify-content: space-between; }
-.hero-kicker, .section-index, .eyebrow-dot, .art-label, .art-index, .method-number, .meta-label, .footer-year, .list-heading, .manage-row .section-index { font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; font-size: 10px; }
-.hero-kicker { color: var(--petrol); display: flex; align-items: center; gap: 10px; }
-.eyebrow-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+.section-index, .art-label, .art-index, .method-number, .meta-label, .footer-year, .list-heading, .manage-row .section-index { font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; font-size: 10px; }
+.hero-profile { display: flex; align-items: center; gap: 14px; }
+.profile-photo { width: 52px; height: 52px; flex: none; overflow: hidden; display: grid; place-items: center; border-radius: 50% 50% 50% 10%; background: var(--coral); color: var(--petrol-deep); font-family: var(--mono); font-size: 14px; letter-spacing: -.12em; }
+.profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+.profile-id { display: grid; gap: 3px; }
+.profile-id strong { font-size: 15px; letter-spacing: -.02em; color: var(--ink); }
+.profile-id span { font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; font-size: 10px; color: var(--petrol); }
+.profile-linkedin { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink-soft); transition: color .2s ease, border-color .2s ease; }
+.profile-linkedin:hover { color: var(--petrol); border-color: var(--petrol); }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr); gap: 80px; align-items: end; margin: 80px 0; }
 h1, h2, h3, p { margin-top: 0; }
 .hero h1, .section-heading h2, .about-copy h2, .contact-inner h2, .case-title-block h1, .case-content-main h2, .auth-panel h1, .manage-header h1 { margin: 0; font-family: var(--serif); font-weight: 500; letter-spacing: -.055em; line-height: .91; }

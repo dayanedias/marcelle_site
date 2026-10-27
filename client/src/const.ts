@@ -6,6 +6,15 @@ export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 // server, so pages render the bundled seed cases and the admin area is hidden.
 export const IS_STATIC_SITE = import.meta.env.MODE === "pages";
 
+// Public profile links shared by the hero, nav and contact sections.
+export const LINKEDIN_URL = "https://www.linkedin.com/in/marcelleuliano/locale=en-US";
+const RESUME_FILE_ID = "1GDYTYif4hjCEoEvw9okxDHn9D_CxsVJy";
+export const RESUME_VIEW_URL = `https://drive.google.com/file/d/${RESUME_FILE_ID}/view?usp=drive_link`;
+export const RESUME_DOWNLOAD_URL = `https://drive.google.com/uc?export=download&id=${RESUME_FILE_ID}`;
+// Drop a portrait at client/public/marcelle.jpg and set this to "marcelle.jpg";
+// while empty, the hero shows the MU monogram instead.
+export const PROFILE_PHOTO = "";
+
 // Router base without the trailing slash, e.g. "/marcelle_site" on GitHub Pages.
 export const ROUTER_BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
