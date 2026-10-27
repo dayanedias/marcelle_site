@@ -33,7 +33,7 @@
 - [ ] ⏳ Aguardando cliente: novo texto da seção de processo.
 
 ## Apresentação pessoal e fechamento
-- [ ] Remover a seção final “Curiosa por natureza” (elementos movidos para a abertura).
+- [x] Remover a seção final “Curiosa por natureza” (elementos movidos para a abertura).
 - [x] Manter “Vamos conversar sobre o que importa?” como encerramento da página.
 
 ## Fluxo de design e cronograma

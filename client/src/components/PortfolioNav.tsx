@@ -22,7 +22,6 @@ export function PortfolioNav() {
         <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label={t("nav.work")}>
           <a href={`${import.meta.env.BASE_URL}#work`} onClick={close}>{t("nav.work")}</a>
           <a href={`${import.meta.env.BASE_URL}#approach`} onClick={close}>{t("nav.approach")}</a>
-          <a href={`${import.meta.env.BASE_URL}#about`} onClick={close}>{t("nav.about")}</a>
           <a href={`${import.meta.env.BASE_URL}#contact`} onClick={close}>{t("nav.contact")}</a>
           <a href={RESUME_VIEW_URL} className="nav-resume" target="_blank" rel="noreferrer" onClick={close}><FileText size={14} /> {t("nav.resume")}</a>
           <button className="language-toggle" type="button" onClick={toggleLanguage} aria-label={`Switch to ${language === "pt" ? "English" : "Português"}`}>
